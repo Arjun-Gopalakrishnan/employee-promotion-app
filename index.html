@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promotion Predictor</title>
+</head>
+<body>
+    <h2>Employee Promotion Prediction</h2>
+    <form action="/predict" method="post">
+        <label>Gender:</label>
+        <input type="text" name="gender" required placeholder="0=Male, 1=Female, 2=Other"><br><br>
+
+        <label>Relevant Experience:</label>
+        <input type="text" name="relevant_experience" required placeholder="0=No, 1=Yes"><br><br>
+
+        <label>Enrolled University:</label>
+        <input type="text" name="enrolled_university" required placeholder="0=None, 1=Full Time, 2=Part Time"><br><br>
+
+        <label>Education Level:</label>
+        <input type="text" name="education_level" required placeholder="0-Unknown, 1-Bachelor, etc."><br><br>
+
+        <label>Major Discipline:</label>
+        <input type="text" name="major_discipline" required><br><br>
+
+        <label>Experience (in years):</label>
+        <input type="text" name="experience" required placeholder="Example: 2, 5, 21"><br><br>
+
+        <label>Company Size:</label>
+        <input type="text" name="company_size" required placeholder="0=Small, 1=Medium, 2=Large"><br><br>
+
+        <label>Company Type:</label>
+        <input type="text" name="company_type" required placeholder="0=Pvt, 1=Public, etc."><br><br>
+
+        <label>Last New Job (years):</label>
+        <input type="text" name="last_new_job" required placeholder="0, 1, 2, etc."><br><br>
+
+        <label>Training Hours:</label>
+        <input type="text" name="training_hours" required><br><br>
+
+        <label>City Dev Index (0.0–1.0):</label>
+        <input type="text" name="city_development_index" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
+
